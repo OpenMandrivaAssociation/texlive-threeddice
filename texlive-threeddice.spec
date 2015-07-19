@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-threeddice
 Version:	1.0
-Release:	9
+Release:	10
 Summary:	Create images of dice with one, two, or three faces showing, using MetaPost
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/threeddice

@@ -1,18 +1,12 @@
-# revision 20675
-# category Package
-# catalog-ctan /graphics/metapost/contrib/macros/threeddice
-# catalog-date 2010-12-07 13:54:00 +0100
-# catalog-license lppl
-# catalog-version 1.0
 Name:		texlive-threeddice
-Version:	1.0
-Release:	11
+Version:	20675
+Release:	1
 Summary:	Create images of dice with one, two, or three faces showing, using MetaPost
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/threeddice
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/threeddice.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/threeddice.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/threeddice.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/threeddice.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ Configuration is possible by editing the source code, following
 the guidance in the documentation.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -41,23 +35,10 @@ the guidance in the documentation.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 756835
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 719731
-- texlive-threeddice
-- texlive-threeddice
-- texlive-threeddice
-

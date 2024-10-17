@@ -3,7 +3,7 @@ Version:	20675
 Release:	2
 Summary:	Create images of dice with one, two, or three faces showing, using MetaPost
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/threeddice
+URL:		https://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/threeddice
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/threeddice.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/threeddice.doc.r%{version}.tar.xz
